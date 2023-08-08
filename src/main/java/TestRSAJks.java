@@ -7,7 +7,7 @@ public class TestRSAJks {
         CryptoUtils cryptoUtils = new CryptoUtils();
 
         PublicKey publicKey = cryptoUtils.publicKeyFromCertification("myCertification.cert");
-        PrivateKey privateKey = cryptoUtils.privateKeyFromJKS("myCrypt.jks", "saltgame", "myAlias");
+        PrivateKey privateKey = cryptoUtils.privateKeyFromJKS("myCrypt.jks", "password", "nom_alias");
 
         System.out.println(cryptoUtils.toBase64String(publicKey.getEncoded()));
         System.out.println(cryptoUtils.toBase64String(privateKey.getEncoded()));
