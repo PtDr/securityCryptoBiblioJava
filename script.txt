@@ -1,0 +1,5 @@
+--commande Generation keystore RSA
+keytool -genkey -alias nom_alias -keyalg RSA -keystore nom_fichier.jks -keysize 2048
+
+--commande generation certificat
+keytool -export -alias nom_alias -keystore nom_fichier.jks -rfc -file nom_fichier_certification.cert
